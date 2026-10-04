@@ -1,0 +1,46 @@
+name: assemble-readme
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Assemble
+        run: |
+          python3 << 'PY'
+          import base64, hashlib
+          from pathlib import Path
+          part = Path(".build/part-01.b64")
+          t = part.read_text().strip()
+          if len(t) != 3500:
+              raise SystemExit(f"part-01 len {len(t)}")
+          if t[1186] != "B":
+              if t[1186] != "F":
+                  raise SystemExit(f"unexpected char {t[1186]!r}")
+              t = t[:1186] + "B" + t[1187:]
+          part_hash = hashlib.sha256(t.encode()).hexdigest()
+          if part_hash != "cd46d70a58f735518cd6340fe13fa60b162e9ef564f8b9dff6afd361bbb2c433":
+              raise SystemExit(f"part-01 hash {part_hash}")
+          chunks = [t if i == 1 else Path(f".build/part-{i:02d}.b64").read_text().strip() for i in range(9)]
+          text = base64.b64decode("".join(chunks)).decode("utf-8")
+          digest = hashlib.sha256(text.encode("utf-8")).hexdigest()
+          expect = "84041529a367cc3f5d9f2ee11394f06f79198d2e6d428044260e1b45c749bafe"
+          if digest != expect:
+              raise SystemExit(f"hash mismatch {digest}")
+          if "Tài liệu tiếng Việt" not in text or "Tài liệu tiếng Anh" not in text:
+              raise SystemExit("missing language sections")
+          Path("README.md").write_text(text)
+          print("wrote", len(text), digest)
+          PY
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git rm -r .build || true
+          git rm -r .github || true
+          git commit -m "Split resources into Vietnamese and English"
+          git push
