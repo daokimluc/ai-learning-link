@@ -1,8 +1,8 @@
 # What to learn in AI
 
-Tổng hợp tài liệu AI. Phần ghi chú viết bằng tiếng Việt. Tài liệu thì tách hai chỗ: đọc bằng tiếng Việt, và đọc bằng tiếng Anh. Trong mỗi chỗ, chia theo hướng, không phải lộ trình. Mỗi mục vài câu nói tài liệu để làm gì. Link nằm riêng một dòng, bấm hoặc copy được.
+Đây là chỗ mình gom link học AI. Chữ giải thích là tiếng Việt. Link thì chia hai bên: một bên đọc bằng tiếng Việt, một bên tiếng Anh.
 
-Không cần xem hết. Mở đúng hướng đang cần.
+Không cần đi từ trên xuống. Hướng nào đang cần thì mở hướng đó. Link để riêng một dòng, cho dễ bấm hoặc copy.
 
 ## Cái gì mất tiền
 
@@ -31,7 +31,7 @@ Link khóa học ở dưới là link giới thiệu, lấy từ bài tổng h�
 
 ## Tài liệu tiếng Việt
 
-Mục này chỉ gồm tài liệu đọc bằng tiếng Việt. Hướng nào không có tên ở đây là vì chưa thấy bản tiếng Việt miễn phí đủ tốt. Phần còn lại nằm ở [tài liệu tiếng Anh](#tài-liệu-tiếng-anh).
+Mấy cái dưới đây đọc bằng tiếng Việt. Bản tiếng Việt miễn phí còn ít, nên mục này ngắn. Phần còn lại ở [tiếng Anh](#tài-liệu-tiếng-anh).
 
 ### Hướng dẫn Python
 
@@ -53,7 +53,7 @@ https://trituenhantao.io/minh-hoa-transformer/
 
 ## Tài liệu tiếng Anh
 
-Từ đây trở xuống, khóa, video, sách và bài báo đọc bằng tiếng Anh.
+Từ đây trở xuống là tiếng Anh.
 
 ### Python
 
