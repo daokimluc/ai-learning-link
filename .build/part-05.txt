@@ -1,0 +1,54 @@
+- Designing Machine Learning Systems: https://github.com/chiphuyen/dmls-book
+- Machine Learning for Beginners: https://github.com/microsoft/ML-For-Beginners
+- LLM Course: https://github.com/mlabonne/llm-course
+- PhiloAgents, code: https://github.com/neural-maze/philoagents-course
+
+### Bài hướng dẫn
+
+- Agents, Google: https://www.kaggle.com/whitepaper-agents
+- Agents Companion, Google: https://www.kaggle.com/whitepaper-agent-companion
+- Building Effective Agents, Anthropic: https://www.anthropic.com/engineering/building-effective-agents
+- Claude Code best practices: https://code.claude.com/docs/en/best-practices
+- A Practical Guide to Building Agents, OpenAI: https://cdn.openai.com/business-guides-and-resources/a-practical-guide-to-building-agents.pdf
+
+### Sách
+
+- Understanding Deep Learning: https://udlbook.github.io/udlbook/
+- Build a Large Language Model (From Scratch): https://www.manning.com/books/build-a-large-language-model-from-scratch
+- LLM Engineer's Handbook: https://www.oreilly.com/library/view/llm-engineers-handbook/9781836200079/
+- AI Engineering: https://www.oreilly.com/library/view/ai-engineering/9781098166298/
+- Building Applications with AI Agents: https://www.oreilly.com/library/view/building-applications-with/9781098176495/
+- AI Agents with MCP: https://www.oreilly.com/library/view/ai-agents-with/9798341639546/
+- AI Agents: The Definitive Guide: https://www.oreilly.com/library/view/ai-agents-the/0642572247775/
+
+### Bài báo
+
+- Chain-of-Thought: https://arxiv.org/abs/2201.11903
+- ReAct: https://arxiv.org/abs/2210.03629
+- Toolformer: https://proceedings.neurips.cc/paper_files/paper/2023/hash/d842425e4bf79ba039352da0f658a906-Abstract-Conference.html
+- Generative Agents: https://arxiv.org/abs/2304.03442
+
+### Khóa học
+
+- Crash Course on Python: https://imp.i384100.net/QYd9Dz
+- Python for Data Science, AI & Development: https://imp.i384100.net/9Vd6kQ
+- SQL Foundations: https://imp.i384100.net/k42K6v
+- Introduction to Data Analytics: https://imp.i384100.net/5k0drn
+- Excel Basics for Data Analysis: https://imp.i384100.net/5k0drD
+- Google Data Analytics: https://imp.i384100.net/xJ6DQx
+- Meta Data Analyst: https://imp.i384100.net/rENKMG
+- Google Advanced Data Analytics: https://imp.i384100.net/jR67bn
+- Microsoft Power BI: https://imp.i384100.net/PzdQx6
+- Work Smarter with Microsoft Excel: https://imp.i384100.net/jR67ba
+- Microsoft Excel Professional Certificate: https://imp.i384100.net/PzdQxq
+- ChatGPT + Excel: https://imp.i384100.net/rENKMB
+- Machine Learning Specialization: https://imp.i384100.net/k42K6M
+- Deep Learning Specialization: https://imp.i384100.net/qW6KMO
+- IBM Deep Learning with PyTorch, Keras and TensorFlow: https://imp.i384100.net/enZ0zg
+
+---
+
+Mình viết lại từ bộ tài liệu tổng hợp có sẵn. Link giữ nguyên. Thứ tự thì xếp lại cho người mới dễ đi.
+
+Theo dõi [@Mohiniuni](https://x.com/Mohiniuni) để xem thêm về AI, làm đẹp và kinh doanh.
+@@END@@
