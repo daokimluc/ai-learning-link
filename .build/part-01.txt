@@ -1,0 +1,132 @@
+Mở máy và gõ theo. Chỉ xem thì tuần sau quên hết.
+
+https://www.youtube.com/watch?v=xzXdLRUyjUg
+
+---
+
+## Chặng 1 — Hiểu LLM là gì
+
+Một buổi là đủ.
+
+Ngày đầu đừng mở repo agent. Xem một video, rồi thử nói lại bằng lời của mình: token là gì, và vì sao model cứ đoán từ tiếp theo.
+
+### LLM Introduction
+
+Andrej Karpathy, khoảng 1 giờ.
+
+https://www.youtube.com/watch?v=zjkBMFhNj_g
+
+## Chặng 2 — Python vừa đủ
+
+Vài ngày, người chậm hơn thì gần hai tuần. Biết Python rồi thì sang chặng sau.
+
+Chưa cần thành lập trình viên. Cần mở một file, sửa một dòng, chạy lại, và đọc được dòng lỗi.
+
+Tạm ổn khi bạn viết được một script nhỏ: đọc một file, in ra một kết quả, và tự sửa lúc nó lỗi.
+
+### Crash Course on Python
+
+Khóa này đủ để đỡ ngại khi gặp code.
+
+https://imp.i384100.net/QYd9Dz
+
+### Python for Data Science, AI & Development
+
+Làm quen bảng, file, và vài thư viện sẽ gặp lại trong notebook. Dùng Jupyter quen rồi thì bỏ.
+
+https://imp.i384100.net/9Vd6kQ
+
+## Chặng 3 — Chọn một nhánh
+
+Excel và bài báo ReAct là hai việc khác nhau. Chọn một. Nhánh còn lại để đó, không phải bài về nhà.
+
+### Nhánh A — muốn xây sản phẩm AI
+
+Sang chặng 4. Nên học thêm một chút SQL, để đỡ lạc khi dữ liệu nằm trong bảng.
+
+**SQL Foundations**
+
+https://imp.i384100.net/k42K6v
+
+### Nhánh B — muốn làm phân tích dữ liệu
+
+Nhánh này để xin việc phân tích. Không phải bước bắt buộc trước khi làm agent. Không cần học hết. Một bộ vừa sức:
+
+1. Excel cơ bản
+2. Một chứng chỉ phân tích, Google hoặc Meta, chọn một
+3. Power BI, chỉ khi chỗ làm đang dùng
+4. ChatGPT với Excel, chỉ sau khi tự làm được một bảng
+
+**Introduction to Data Analytics**
+
+Khóa nhập môn: câu hỏi cần trả lời là gì, dữ liệu bẩn trông thế nào, và kể một kết quả ra sao.
+
+https://imp.i384100.net/5k0drn
+
+**Excel Basics for Data Analysis**
+
+Học cái này trước các chứng chỉ Excel khác. Không đụng bảng tính thì bỏ cả phần Excel.
+
+https://imp.i384100.net/5k0drD
+
+**Google Data Analytics Professional Certificate**
+
+Khóa rộng, hợp người mới.
+
+https://imp.i384100.net/xJ6DQx
+
+**Meta Data Analyst Professional Certificate**
+
+Cùng kiểu với chứng chỉ Google. Lấy một cái là đủ, không cần sưu tầm bằng.
+
+https://imp.i384100.net/rENKMG
+
+**Google Advanced Data Analytics Professional Certificate**
+
+Học sau chứng chỉ cơ bản. Học song song dễ bỏ giữa chừng.
+
+https://imp.i384100.net/jR67bn
+
+**Microsoft Power BI Data Analyst Professional Certificate**
+
+https://imp.i384100.net/PzdQx6
+
+**Work Smarter with Microsoft Excel**
+
+Ngắn hơn chứng chỉ đầy đủ. Đủ nếu chỉ cần xong việc trên bảng tính.
+
+https://imp.i384100.net/jR67ba
+
+**Microsoft Excel Professional Certificate**
+
+Khóa dài. Hợp khi bảng tính là việc hằng ngày.
+
+https://imp.i384100.net/PzdQxq
+
+**ChatGPT + Excel**
+
+Học khi bạn đã tự làm được một bảng. Làm sớm hơn thì khó biết câu trả lời sai chỗ nào.
+
+https://imp.i384100.net/rENKMB
+
+Chọn nhánh nào thì đi nhánh đó. Đừng học nhánh kia cho có.
+
+## Chặng 4 — Machine learning
+
+Dành vài tuần cho một khóa.
+
+Chỗ cần nắm là cách kiểm tra: máy đang học một quy luật, hay chỉ nhớ đáp án đã thấy. Học một khóa cho xong. Repo để tự gõ lại. Sách dày để tra khi kẹt, chưa cần đọc hết trước khi đi tiếp.
+
+Thử giải thích câu này. Model đúng 99% trên dữ liệu nó đã thấy, sao vẫn có thể vô dụng? Nói được là qua chặng này.
+
+### Machine Learning Specialization
+
+Khóa của Andrew Ng. Chặng này chỉ học một khóa thì học khóa này đến cuối.
+
+https://imp.i384100.net/k42K6M
+
+### Machine Learning for Beginners
+
+Repo miễn phí của Microsoft, có bài tập để gõ theo.
+
+@@END@@
