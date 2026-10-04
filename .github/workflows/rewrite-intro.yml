@@ -1,0 +1,43 @@
+name: rewrite-intro
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Rewrite intro
+        run: |
+          python3 << 'PY'
+          import base64, hashlib
+          from pathlib import Path
+          pairs = [
+              ("VOG7lW5nIGjhu6NwIHTDoGkgbGnhu4d1IEFJLiBQaOG6p24gZ2hpIGNow7ogdmnhur90IGLhurFuZyB0aeG6v25nIFZp4buHdC4gVMOgaSBsaeG7h3UgdGjDrCB0w6FjaCBoYWkgY2jhu5c6IMSR4buNYyBi4bqxbmcgdGnhur9uZyBWaeG7h3QsIHbDoCDEkeG7jWMgYuG6sW5nIHRp4bq/bmcgQW5oLiBUcm9uZyBt4buXaSBjaOG7lywgY2hpYSB0aGVvIGjGsOG7m25nLCBraMO0bmcgcGjhuqNpIGzhu5kgdHLDrG5oLiBN4buXaSBt4bulYyB2w6BpIGPDonUgbsOzaSB0w6FpIGxp4buHdSDEkeG7gyBsw6BtIGfDrC4gTGluayBu4bqxbSByacOqbmcgbeG7mXQgZMOybmcsIGLhuqVtIGhv4bq3YyBjb3B5IMSRxrDhu6NjLgoKS2jDtG5nIGPhuqduIHhlbSBo4bq/dC4gTeG7nyDEkcO6bmcgaMaw4bubbmcgxJFhbmcgY+G6p24u", "xJDDonkgbMOgIGNo4buXIG3DrG5oIGdvbSBsaW5rIGjhu41jIEFJLiBDaOG7ryBnaeG6o2kgdGjDrWNoIGzDoCB0aeG6v25nIFZp4buHdC4gTGluayB0aMOsIGNoaWEgaGFpIGLDqm46IG3hu5l0IGLDqm4gxJHhu41jIGLhurFuZyB0aeG6v25nIFZp4buHdCwgbeG7mXQgYsOqbiB0aeG6v25nIEFuaC4KCktow7RuZyBj4bqnbiDEkWkgdOG7qyB0csOqbiB4deG7kW5nLiBIxrDhu5tuZyBuw6BvIMSRYW5nIGPhuqduIHRow6wgbeG7nyBoxrDhu5tuZyDEkcOzLiBMaW5rIMSR4buDIHJpw6puZyBt4buZdCBkw7JuZywgY2hvIGThu4UgYuG6pW0gaG/hurdjIGNvcHku"),
+              ("TeG7pWMgbsOgeSBjaOG7iSBn4buTbSB0w6FpIGxp4buHdSDEkeG7jWMgYuG6sW5nIHRp4bq/bmcgVmnhu4d0LiBIxrDhu5tuZyBuw6BvIGtow7RuZyBjw7MgdMOqbiDhu58gxJHDonkgbMOgIHbDrCBjaMawYSB0aOG6pXkgYuG6o24gdGnhur9uZyBWaeG7h3QgbWnhu4VuIHBow60gxJHhu6cgdOG7kXQuIFBo4bqnbiBjw7JuIGzhuqFpIG7hurFtIOG7nyBbdMOgaSBsaeG7h3UgdGnhur9uZyBBbmhdKCN0w6FpLWxp4buHdS10aeG6v25nLWFuaCku", "TeG6pXkgY8OhaSBkxrDhu5tpIMSRw6J5IMSR4buNYyBi4bqxbmcgdGnhur9uZyBWaeG7h3QuIELhuqNuIHRp4bq/bmcgVmnhu4d0IG1p4buFbiBwaMOtIGPDsm4gw610LCBuw6puIG3hu6VjIG7DoHkgbmfhuq9uLiBQaOG6p24gY8OybiBs4bqhaSDhu58gW3Rp4bq/bmcgQW5oXSgjdMOgaS1saeG7h3UtdGnhur9uZy1hbmgpLg=="),
+              ("VOG7qyDEkcOieSB0cuG7nyB4deG7kW5nLCBraMOzYSwgdmlkZW8sIHPDoWNoIHbDoCBiw6FpIGLDoW8gxJHhu41jIGLhurFuZyB0aeG6v25nIEFuaC4=", "VOG7qyDEkcOieSB0cuG7nyB4deG7kW5nIGzDoCB0aeG6v25nIEFuaC4="),
+          ]
+          text = Path("README.md").read_text()
+          for old_b, new_b in pairs:
+              old = base64.b64decode(old_b).decode()
+              new = base64.b64decode(new_b).decode()
+              n = text.count(old)
+              if n != 1:
+                  raise SystemExit(f"count {n} for {old[:40]!r}")
+              text = text.replace(old, new, 1)
+          digest = hashlib.sha256(text.encode()).hexdigest()
+          expect = "fb59bfef4105a41ce1b0c2e41c037528b090a57c6ad2a57ab3ecfb8c55545225"
+          if digest != expect:
+              raise SystemExit(f"hash {digest}")
+          Path("README.md").write_text(text)
+          print("ok", digest)
+          PY
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git rm -r .github || true
+          git commit -m "Rewrite the opening in plainer Vietnamese"
+          git push
