@@ -1,4 +1,4 @@
-# What to learn in AI
+# AI learning links
 
 Đây là chỗ mình gom link học AI. Chữ giải thích là tiếng Việt. Link thì chia hai bên: một bên đọc bằng tiếng Việt, một bên tiếng Anh.
 
